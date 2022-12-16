@@ -25,6 +25,7 @@ public class StudentEditActivity extends AppCompatActivity {
         editName = findViewById(R.id.student_edit_name);
         editId = findViewById(R.id.student_edit_id);
 
+        btnBack = findViewById(R.id.student_profile_btnBack);
         btnSave = findViewById(R.id.student_edit_btnSave);
 
         Bundle bundle = getIntent().getExtras();
@@ -36,10 +37,14 @@ public class StudentEditActivity extends AppCompatActivity {
             public void onClick(View view) {
                 st.setName(editName.getText().toString());
                 st.setId(editId.getText().toString());
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent it = new Intent(getApplicationContext(),StudentProfileActivity.class);
                 startActivity(it);
             }
         });
-
     }
 }
