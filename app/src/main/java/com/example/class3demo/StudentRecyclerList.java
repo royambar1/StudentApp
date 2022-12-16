@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.example.class3demo.model.Model;
 import com.example.class3demo.model.Student;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class StudentRecyclerList extends AppCompatActivity {
@@ -42,6 +43,11 @@ public class StudentRecyclerList extends AppCompatActivity {
             @Override
             public void onItemClick(int pos) {
                 Log.d("TAG","pos clicked " + pos);
+                Intent it = new Intent(getApplicationContext(),StudentProfileActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("position",pos);
+                it.putExtras(bundle);
+                startActivity(it);
             }
         });
 
