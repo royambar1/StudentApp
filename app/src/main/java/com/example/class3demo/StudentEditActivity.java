@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,7 +26,7 @@ public class StudentEditActivity extends AppCompatActivity {
         editName = findViewById(R.id.student_edit_name);
         editId = findViewById(R.id.student_edit_id);
 
-        btnBack = findViewById(R.id.student_profile_btnBack);
+        btnBack = findViewById(R.id.student_edit_btnCancel);
         btnSave = findViewById(R.id.student_edit_btnSave);
 
         Bundle bundle = getIntent().getExtras();
@@ -37,6 +38,7 @@ public class StudentEditActivity extends AppCompatActivity {
             public void onClick(View view) {
                 st.setName(editName.getText().toString());
                 st.setId(editId.getText().toString());
+                Log.d("TAG",st.getName());
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {

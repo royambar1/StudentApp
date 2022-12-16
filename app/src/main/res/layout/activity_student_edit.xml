@@ -10,7 +10,6 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/addStudent_name_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,12 +74,12 @@
         android:layout_marginBottom="80dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/student_edit_btnEdit"
+        app:layout_constraintEnd_toStartOf="@+id/student_edit_btnCancel"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/student_edit_btnEdit"
+        android:id="@+id/student_edit_btnCancel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
