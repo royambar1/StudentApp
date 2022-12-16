@@ -11,11 +11,6 @@ public class Model {
     }
 
     private Model(){
-        for (int i = 0; i < 20 ; i++) {
-
-            addStudent(new Student("name " + i, ""+i,"",false));
-
-        }
     }
 
     List<Student> data = new LinkedList<>();
