@@ -31,11 +31,20 @@ public class StudentProfileActivity extends AppCompatActivity {
 
 
         Bundle bundle = getIntent().getExtras();
-        int pos =  bundle.getInt("position");
-        Student st = Model.instance().getStudent(pos);
-        name.setText(name.getText() + " " + st.getName());
-        id.setText(id.getText() + " " + st.getId());
-
+        int pos;
+        if (bundle != null) {
+            pos = bundle.getInt("position");
+            Student st = Model.instance().getStudent(pos);
+            name.setText(name.getText() + " " + st.getName());
+            id.setText(id.getText() + " " + st.getId());
+        }
+        else {
+            Bundle bundle1 = getIntent().getExtras();
+            pos = bundle1.getInt("position1");
+            Student st1 = Model.instance().getStudent(pos);
+            name.setText(name.getText() + " " + st1.getName());
+            id.setText(id.getText() + " " + st1.getId());
+        }
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

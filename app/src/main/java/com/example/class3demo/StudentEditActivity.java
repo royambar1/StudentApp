@@ -38,13 +38,20 @@ public class StudentEditActivity extends AppCompatActivity {
             public void onClick(View view) {
                 st.setName(editName.getText().toString());
                 st.setId(editId.getText().toString());
-                Log.d("TAG",st.getName());
+                Intent it = new Intent(getApplicationContext(),StudentProfileActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("position1",pos);
+                it.putExtras(bundle);
+                startActivity(it);
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(getApplicationContext(),StudentProfileActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("position1",pos);
+                it.putExtras(bundle);
                 startActivity(it);
             }
         });
