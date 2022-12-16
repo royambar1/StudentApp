@@ -21,8 +21,8 @@ public class AddStudentActivity extends AppCompatActivity {
         EditText nameEt = findViewById(R.id.addStudent_name_edit_text);
         EditText idEt = findViewById(R.id.addStudent_id_edit_text);
         TextView messageTv = findViewById(R.id.addStudent_msg);
-        Button saveBtn = findViewById(R.id.addStudent_save_btn);
-        Button cancelBtn = findViewById(R.id.addStudent_cancel_btn);
+        Button saveBtn = findViewById(R.id.student_profile_btnBack);
+        Button cancelBtn = findViewById(R.id.student_profile_btnEdit);
 
         saveBtn.setOnClickListener(view -> {
             Student st = new Student(nameEt.getText().toString(),idEt.getText().toString(),"",false);

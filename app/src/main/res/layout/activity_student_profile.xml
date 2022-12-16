@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/student_profile_name" />
 
     <Button
-        android:id="@+id/addStudent_save_btn"
+        android:id="@+id/student_profile_btnBack"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -49,12 +49,12 @@
         android:layout_marginBottom="80dp"
         android:text="back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addStudent_cancel_btn"
+        app:layout_constraintEnd_toStartOf="@+id/student_profile_btnEdit"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/addStudent_cancel_btn"
+        android:id="@+id/student_profile_btnEdit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -64,6 +64,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addStudent_save_btn" />
+        app:layout_constraintStart_toEndOf="@+id/student_profile_btnBack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

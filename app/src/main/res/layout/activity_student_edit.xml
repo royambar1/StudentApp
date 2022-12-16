@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddStudentActivity">
+    tools:context=".StudentEditActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/addStudent_name_edit_text"
+        android:id="@+id/student_edit_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/student_profile_name" />
 
     <EditText
-        android:id="@+id/addStudent_id_edit_text"
+        android:id="@+id/student_edit_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toEndOf="@+id/student_profile_id" />
 
     <Button
-        android:id="@+id/student_profile_btnBack"
+        android:id="@+id/student_edit_btnSave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -75,12 +75,12 @@
         android:layout_marginBottom="80dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/student_profile_btnEdit"
+        app:layout_constraintEnd_toStartOf="@+id/student_edit_btnEdit"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/student_profile_btnEdit"
+        android:id="@+id/student_edit_btnEdit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -90,14 +90,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/student_profile_btnBack" />
+        app:layout_constraintStart_toEndOf="@+id/student_edit_btnSave" />
 
-    <TextView
-        android:id="@+id/addStudent_msg"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/student_profile_btnBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
