@@ -14,10 +14,12 @@ import android.widget.EditText;
 import com.example.class3demo.model.Model;
 import com.example.class3demo.model.Student;
 
+import java.util.List;
+
 public class StudentEditActivity extends AppCompatActivity {
 
     EditText editName,editId;
-    Button btnBack, btnSave;
+    Button btnBack, btnDelete, btnSave;
     CheckBox checkBox;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -30,12 +32,19 @@ public class StudentEditActivity extends AppCompatActivity {
 
         btnBack = findViewById(R.id.student_edit_btnCancel);
         btnSave = findViewById(R.id.student_edit_btnSave);
-
+        btnDelete = findViewById(R.id.student_edit_btnDelete);
         checkBox = findViewById(R.id.student_edit_checkBox);
 
         Bundle bundle = getIntent().getExtras();
         int pos =  bundle.getInt("position");
         Student st = Model.instance().getStudent(pos);
+        List<Student> studentList = Model.instance().getAllStudents();
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                studentList.remove(pos);
+            }
+        });
 
         checkBox.setOnClickListener(new View.OnClickListener() {
             @Override

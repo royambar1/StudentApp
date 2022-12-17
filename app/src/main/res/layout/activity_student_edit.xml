@@ -99,4 +99,13 @@
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="415dp" />
 
+    <Button
+        android:id="@+id/student_edit_btnDelete"
+        android:layout_width="82dp"
+        android:layout_height="36dp"
+        android:text="DELETE"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="537dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
