@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.example.class3demo.model.Model;
@@ -17,6 +18,7 @@ public class StudentEditActivity extends AppCompatActivity {
 
     EditText editName,editId;
     Button btnBack, btnSave;
+    CheckBox checkBox;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +31,18 @@ public class StudentEditActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.student_edit_btnCancel);
         btnSave = findViewById(R.id.student_edit_btnSave);
 
+        checkBox = findViewById(R.id.student_edit_checkBox);
+
         Bundle bundle = getIntent().getExtras();
         int pos =  bundle.getInt("position");
         Student st = Model.instance().getStudent(pos);
+
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                st.setCb(!st.getCb());
+            }
+        });
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override

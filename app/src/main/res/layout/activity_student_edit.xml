@@ -91,4 +91,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/student_edit_btnSave" />
 
+    <CheckBox
+        android:id="@+id/student_edit_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="415dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

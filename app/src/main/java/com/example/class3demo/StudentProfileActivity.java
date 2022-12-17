@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.example.class3demo.model.Model;
@@ -17,6 +18,7 @@ public class StudentProfileActivity extends AppCompatActivity {
 
     TextView name,id;
     Button btnBack, btnEdit;
+    CheckBox checkBox;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class StudentProfileActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.student_profile_btnBack);
         btnEdit = findViewById(R.id.student_profile_btnEdit);
 
-
+        checkBox = findViewById(R.id.student_profile_checkBox);
         Bundle bundle = getIntent().getExtras();
         int pos;
         if (bundle != null) {
@@ -37,6 +39,7 @@ public class StudentProfileActivity extends AppCompatActivity {
             Student st = Model.instance().getStudent(pos);
             name.setText(name.getText() + " " + st.getName());
             id.setText(id.getText() + " " + st.getId());
+            checkBox.setChecked(st.cb);
         }
         else {
             Bundle bundle1 = getIntent().getExtras();
@@ -44,6 +47,7 @@ public class StudentProfileActivity extends AppCompatActivity {
             Student st1 = Model.instance().getStudent(pos);
             name.setText(name.getText() + " " + st1.getName());
             id.setText(id.getText() + " " + st1.getId());
+            checkBox.setChecked(st1.cb);
         }
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
