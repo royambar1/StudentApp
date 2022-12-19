@@ -33,22 +33,30 @@ public class StudentProfileActivity extends AppCompatActivity {
 
         checkBox = findViewById(R.id.student_profile_checkBox);
         Bundle bundle = getIntent().getExtras();
+        Student st;
         int pos;
         if (bundle != null) {
             pos = bundle.getInt("position");
-            Student st = Model.instance().getStudent(pos);
+            st = Model.instance().getStudent(pos);
             name.setText(name.getText() + " " + st.getName());
             id.setText(id.getText() + " " + st.getId());
             checkBox.setChecked(st.cb);
-        }
-        else {
-            Bundle bundle1 = getIntent().getExtras();
-            pos = bundle1.getInt("position1");
-            Student st1 = Model.instance().getStudent(pos);
-            name.setText(name.getText() + " " + st1.getName());
-            id.setText(id.getText() + " " + st1.getId());
-            checkBox.setChecked(st1.cb);
-        }
+
+//        else {
+//            Bundle bundle1 = getIntent().getExtras();
+//            pos = bundle.getInt("position1");
+//            st = Model.instance().getStudent(pos);
+//            name.setText(name.getText() + " " + st.getName());
+//            id.setText(id.getText() + " " + st.getId());
+//            checkBox.setChecked(st.cb);
+//        }
+
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                st.setCb(!st.getCb());
+            }
+        });
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,5 +75,6 @@ public class StudentProfileActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+        }
     }
 }

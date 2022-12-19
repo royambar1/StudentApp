@@ -11,8 +11,6 @@ public class Model {
     }
 
     private Model(){
-        Student st = new Student("test","1","",false);
-        addStudent(st);
     }
 
     List<Student> data = new LinkedList<>();
@@ -29,5 +27,8 @@ public class Model {
         data.add(st);
     }
 
+    public void deleteStudent(int pos) {
+        data.remove(pos);
+    }
+    }
 
-}

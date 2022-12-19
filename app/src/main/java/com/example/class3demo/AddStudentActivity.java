@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -23,9 +24,10 @@ public class AddStudentActivity extends AppCompatActivity {
         TextView messageTv = findViewById(R.id.addStudent_msg);
         Button saveBtn = findViewById(R.id.student_profile_btnBack);
         Button cancelBtn = findViewById(R.id.student_profile_btnEdit);
+        CheckBox checkBox = findViewById(R.id.student_checkBox);
 
         saveBtn.setOnClickListener(view -> {
-            Student st = new Student(nameEt.getText().toString(),idEt.getText().toString(),"",false);
+            Student st = new Student(nameEt.getText().toString(),idEt.getText().toString(),"",checkBox.isChecked());
             Model.instance().addStudent(st);
             Intent it = new Intent(getApplicationContext(), StudentRecyclerList.class);
             startActivity(it);
