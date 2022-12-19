@@ -1,6 +1,6 @@
 # StudentApp
 
-Class assignment to create a list of students (Add a new Student, Delete and Edit).
+Class assignment to create a list of students (Add a new Student, Delete and Edit). <br/>
 Android app written in Java using Android Studio.
 
 https://user-images.githubusercontent.com/93988278/208494386-a825ec01-ce51-4b4d-aa8a-64b853809766.mp4
